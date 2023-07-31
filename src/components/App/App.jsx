@@ -1,11 +1,15 @@
-import { Header } from "../Header/Header";
-import { Post } from "../Post/Post";
+import { Navbar } from "../Navbar";
+import { Post } from "../Post";
 import "./index.css";
 
 export const App = () => {
   return (
     <>
-      <Header />
+      <Navbar />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
       <Post />
     </>
   );
