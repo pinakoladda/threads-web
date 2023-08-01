@@ -8,7 +8,7 @@ import "./index.css";
 
 export const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <Button className="navbar__home-button">
         <IconHome />
       </Button>
@@ -24,6 +24,6 @@ export const Navbar = () => {
       <Button className="navbar__profile-button">
         <IconProfile />
       </Button>
-    </div>
+    </nav>
   );
 };
