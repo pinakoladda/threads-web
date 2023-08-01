@@ -1,25 +1,26 @@
 import { IconHeartOutline } from "../Icons/IconHeartOutline";
 import { IconMore } from "../Icons/IconMore";
+import { Button } from "../Button";
 import "./index.css";
 
-export const Post = ({ text, userName }) => {
+export const Post = ({ text, userName, login }) => {
   return (
     <div className="post">
       <div className="post__header">
         <div className="post__avatar"></div>
         <div className="post__info">
           <div className="post__user-name">{userName}</div>
-          <div className="post__login">@whoisgoodboy</div>
+          <div className="post__login">{login}</div>
         </div>
         <div className="post__date">11 oct</div>
-        <button className="post__more-button">
+        <Button className="post__more-button">
           <IconMore />
-        </button>
+        </Button>
       </div>
       <p className="post__text">{text}</p>
-      <button className="post__like-button">
+      <Button className="post__like-button">
         <IconHeartOutline />
-      </button>
+      </Button>
     </div>
   );
 };
