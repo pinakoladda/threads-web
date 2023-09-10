@@ -6,6 +6,7 @@ import { Posts } from "./pages/posts";
 import { LoginPage } from "./pages/login";
 import { AuthProvider } from "./hooks/useAuth/useAuth";
 import { RegisterPage } from "./pages/register";
+import { CreatePost } from "./components/CreatePost";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <RegisterPage />,
+  },
+  {
+    path: "/create-post",
+    element: <CreatePost />,
   },
 ]);
 

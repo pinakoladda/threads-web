@@ -1,0 +1,69 @@
+.create-post__form {
+    width: 300px;
+    padding: 12px;
+    gap: unset;
+    display: block;
+}
+
+.create-post__container {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 25%;
+    align-items: end;
+}
+
+.create-post__close-button {
+    color: #627163;
+    padding: 0;
+    font-size: 14px;
+}
+
+
+.create-post__header {
+    margin: 0;
+    font-size: 18px;
+    color: #157F1F;
+    text-align: center;
+}
+
+.create-post__input {
+    border: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-height: 500px;
+}
+
+.create-post__input:focus {
+    outline: none;
+}
+
+.create-post__attach-button{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.attach-button__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.button__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.create-post__text {
+    margin: 0;
+    font-size: 14px;
+    color: #627163;
+}
+
+.create-post__done-button {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #157F1F;
+}

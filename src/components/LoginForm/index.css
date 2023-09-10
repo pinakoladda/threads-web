@@ -1,9 +1,3 @@
-.form__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .login-form__header-container {
     display: flex;
     justify-content: space-between;
