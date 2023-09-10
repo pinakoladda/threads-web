@@ -1,6 +1,7 @@
-import { IconHeartOutline } from "../IconHeartOutline";
-import { IconMore } from "../IconMore";
+import { IconHeartOutline } from "../Icons/IconHeartOutline";
+import { IconMore } from "../Icons/IconMore";
 import "./index.css";
+
 export const Post = () => {
   return (
     <div className="post">
