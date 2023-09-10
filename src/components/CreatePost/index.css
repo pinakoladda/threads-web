@@ -1,5 +1,5 @@
 .create-post__form {
-    width: 300px;
+    width: 400px;
     padding: 12px;
     gap: unset;
     display: block;
@@ -24,6 +24,28 @@
     font-size: 18px;
     color: #157F1F;
     text-align: center;
+}
+
+.create-post__content-container {
+    display: flex;
+    gap: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+.create-post__user-name {
+    margin: 0 0 10px 0;
+
+}
+
+.create-post__avatar {
+    width:50px;
+    height: 50px;
+    background-color: #627163;
+    border-radius: 50%;
+    flex: 0 0 auto;
 }
 
 .create-post__input {
