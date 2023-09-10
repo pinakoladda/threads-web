@@ -1,15 +1,4 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 400px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 50px 38px;
-    gap: 20px;
-}
-
-.form__header-container {
+.login-form__header-container {
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -17,68 +6,37 @@
     color: #157F1F;
 }
 
-.form__name {
+.login-form__name {
     font-size: 24px;
     margin: 0;
 }
 
-.form__header-text {
+.login-form__header-text {
     margin: 0;
 }
 
-.form__link {
+.login-form__link {
     margin-left: 5px;
 }
 
-.form__link:hover {
-    opacity: 0.5;
-    transition: 0.3s ease-in-out;
-}
-
-.form__link:visited {
-    color: #a7b3a6;
-}
-
-.form__container {
+.login-form__container {
     display: flex;
     flex-direction: column;
 }
 
-.form__label {
+.login-form__label {
     margin: 0 0 10px;
     color: #157F1F;
     cursor: pointer;
     transition: 0.3s ease-out;
 }
 
-.form__label:hover {
+.login-form__label:hover {
     opacity: 0.2;
 
 }
 
-.form__input {
-    height: 32px;
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 0 8px;
-    font-size: 18px;
-}
-
-.form__input:focus {
-    background-color: #EFF6EE;
-    outline-color: #157F1F;
-}
-
-.form__input:-webkit-autofill,
-.form__input:-webkit-autofill:hover, 
-.form__input:-webkit-autofill:focus, 
-.form__input:-webkit-autofill:active{
-    -webkit-text-fill-color: #000;
-    -webkit-text-size-adjust: 18px;
-
-}
-
-.form__button {
+.login-form__button {
     font-size: 18px;
     padding: 6px;
     width: 100%;

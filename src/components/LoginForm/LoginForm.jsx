@@ -1,5 +1,9 @@
 import "./index.css";
+import { Input } from "../Input";
+import { Button } from "../Button";
 import { request } from "../../api";
+import { Form } from "../Form";
+import { Link } from "../Link";
 
 export const LoginForm = () => {
   const onSubmit = (event) => {
@@ -15,44 +19,44 @@ export const LoginForm = () => {
   };
   return (
     <div>
-      <form className="form" onSubmit={onSubmit}>
-        <div className="form__header-container">
-          <p className="form__name">Sign in</p>
-          <p className="form__header-text">
+      <Form onSubmit={onSubmit}>
+        <div className="login-form__header-container">
+          <p className="login-form__name">Sign in</p>
+          <p className="login-form__header-text">
             First time here?
-            <a className="form__link" href="/signup" title="Sign up">
+            <Link className="login-form__link" href="/signup" title="Sign up">
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
-        <div className="form__container">
-          <label htmlFor="login" className="form__label">
+        <div className="login-form__container">
+          <label htmlFor="login" className="login-form__label">
             Login:
           </label>
-          <input
+          <Input
             id="login"
-            className="form__input"
+            className="login-form__input"
             type="text"
             name="login"
             placeholder="Login"
           />
         </div>
-        <div className="form__container">
-          <label htmlFor="password" className="form__label">
+        <div className="login-form__container">
+          <label htmlFor="password" className="login-form__label">
             Password:
           </label>
-          <input
+          <Input
             id="password"
-            className="form__input"
+            className="login-form__input"
             type="password"
             name="password"
             placeholder="Password"
           />
         </div>
-        <button className="button form__button" type="submit">
+        <Button className="button login-form__button" type="submit">
           Login
-        </button>
-      </form>
+        </Button>
+      </Form>
     </div>
   );
 };
