@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 38px;
+    gap: 20px;
+}
+
+.form__name {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0 20px;
+}
+
+.form__input {
+    height: 32px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+.form__button {
+    font-size: 24px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid rgb(64, 148, 227);
+    border-radius: 5px;
+    background-color: rgb(133, 185, 234);
+    color: #fff;
+}
