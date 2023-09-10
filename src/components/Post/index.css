@@ -2,11 +2,6 @@
     background-color: #FFF;
     padding: 12px;
     border-radius: 12px;
-    max-width: 516px;
-}
-
-.post:not(:last-child) {
-    margin-bottom: 16px;
 }
 
 .post__header {
