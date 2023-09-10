@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Post } from "../Post/Post";
-import "./index.css";
 import { request } from "../../api";
+import "./index.css";
 
 export const PostsList = () => {
   const [posts, setPosts] = useState([]);
@@ -18,8 +18,8 @@ export const PostsList = () => {
         {posts.map((post) => (
           <Post
             text={post.text}
-            userName="Buddy"
-            login="@popopo"
+            userName={post.author.name}
+            login={post.author.login}
             key={post._id}
           />
         ))}

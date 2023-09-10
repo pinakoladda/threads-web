@@ -2,9 +2,11 @@ import { Form } from "../Form";
 import { Button } from "../Button";
 import { IconAttach } from "../Icons/IconAttach";
 import { request } from "../../api";
+import { useAuth } from "../../hooks/useAuth/useAuth";
 import "./index.css";
 
-export const CreatePost = () => {
+export const CreatePost = ({ onCancel }) => {
+  const { user } = useAuth();
   const onSubmit = (event) => {
     event.preventDefault();
     const text = event.target.text.value;
@@ -16,13 +18,15 @@ export const CreatePost = () => {
   return (
     <Form className="create-post__form" onSubmit={onSubmit}>
       <div className="create-post__container">
-        <Button className="create-post__close-button">Cancel</Button>
+        <Button className="create-post__close-button" onClick={onCancel}>
+          Cancel
+        </Button>
         <p className="create-post__header">New post</p>
       </div>
       <div className="create-post__content-container">
         <div className="create-post__avatar"></div>
         <div className="container">
-          <p className="create-post__user-name">buddy_good_boy</p>
+          <p className="create-post__user-name">{user?.login}</p>
           <textarea
             name="text"
             role="textbox"
