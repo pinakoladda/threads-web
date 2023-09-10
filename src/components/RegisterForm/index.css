@@ -59,6 +59,10 @@
     color: #627163;
 }
 
+.reqister-form__error {
+    color: red;
+}
+
 @media screen and (max-width: 450px) {
     .register-form__header-container {
         margin: 0 0 10px;

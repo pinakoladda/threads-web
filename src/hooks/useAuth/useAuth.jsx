@@ -7,12 +7,24 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const tkn = localStorage.getItem("token");
-    if (!tkn && window.location.pathname !== "/signin") {
-      window.location.href = "/signin";
-
+    if (!tkn) {
+      if (
+        window.location.pathname !== "/signin" &&
+        window.location.pathname !== "/signup"
+      ) {
+        window.location.href = "/signin";
+      }
       return;
     }
-    request.get("/user").then((res) => setUser(res.data));
+    request
+      .get("/user")
+      .then((res) => setUser(res.data))
+      .catch((err) => {
+        if (err.response.status === 401) {
+          localStorage.removeItem("token");
+          window.location.href = "/signin";
+        }
+      });
   }, []);
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 };

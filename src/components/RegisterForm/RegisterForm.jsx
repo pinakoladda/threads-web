@@ -1,5 +1,6 @@
 import { request } from "../../api";
 import { Form } from "../Form";
+import { useState } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { Link } from "../Link";
@@ -7,6 +8,7 @@ import "./index.css";
 import { Select } from "../Select";
 
 export const RegisterForm = () => {
+  const [errorText, setErrorText] = useState();
   const onSubmit = (event) => {
     event.preventDefault();
     const login = event.target.login.value;
@@ -31,6 +33,9 @@ export const RegisterForm = () => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         window.location.href = "/";
+      })
+      .catch((err) => {
+        setErrorText(err.response.data.message);
       });
   };
   return (
@@ -85,6 +90,9 @@ export const RegisterForm = () => {
             type="password"
             required
           />
+        </div>
+        <div className="register-form__container reqister-form__error">
+          {errorText}
         </div>
         <div className="register-form__button-container">
           <Button
