@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { Post } from "../Post/Post";
 import "./index.css";
+import { request } from "../../api";
 
 export const PostsList = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/posts")
-      .then((res) => res.json())
-      .then(setPosts);
+    request.get("/posts").then((res) => {
+      setPosts(res.data);
+    });
   }, []);
 
   return (
