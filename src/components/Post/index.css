@@ -3,6 +3,11 @@
     padding: 12px;
     border-radius: 12px;
 }
+
+.post:not(:last-child) {
+    margin-bottom: 16px;
+}
+
 .post__header {
     display: flex;
     gap: 8px;
