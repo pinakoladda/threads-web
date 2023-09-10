@@ -5,14 +5,31 @@
     width: 400px;
     background-color: #fff;
     border-radius: 10px;
-    padding: 38px;
+    padding: 50px 38px;
     gap: 20px;
 }
 
 .form__name {
-    text-align: center;
     font-size: 24px;
-    margin: 10px 0 20px;
+    margin: 0 0 10px;
+    color: #157F1F;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label {
+    margin: 0 0 10px;
+    color: #157F1F;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.form__label:hover {
+    opacity: 0.2;
+
 }
 
 .form__input {
@@ -23,13 +40,27 @@
     font-size: 18px;
 }
 
+.form__input:focus {
+    background-color: #EFF6EE;
+    outline-color: #157F1F;
+}
+
+.form__input:-webkit-autofill,
+.form__input:-webkit-autofill:hover, 
+.form__input:-webkit-autofill:focus, 
+.form__input:-webkit-autofill:active{
+    -webkit-text-fill-color: #000;
+    -webkit-text-size-adjust: 18px;
+
+}
+
 .form__button {
-    font-size: 24px;
-    width: 50%;
-    margin: 0 auto;
+    font-size: 18px;
+    padding: 6px;
+    width: 100%;
     margin-top: 20px;
-    border: 2px solid rgb(64, 148, 227);
+    border: 1px solid #157F1F;
     border-radius: 5px;
-    background-color: rgb(133, 185, 234);
-    color: #fff;
+    background-color: #EFF6EE;
+    color: #157F1F;
 }
