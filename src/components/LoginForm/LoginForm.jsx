@@ -16,9 +16,17 @@ export const LoginForm = () => {
   return (
     <div>
       <form className="form" onSubmit={onSubmit}>
-        <p className="form__name">Sign in</p>
+        <div className="form__header-container">
+          <p className="form__name">Sign in</p>
+          <p className="form__header-text">
+            First time here?
+            <a className="form__link" href="/signup" title="Sign up">
+              Sign up
+            </a>
+          </p>
+        </div>
         <div className="form__container">
-          <label for="login" className="form__label">
+          <label htmlFor="login" className="form__label">
             Login:
           </label>
           <input
@@ -30,7 +38,7 @@ export const LoginForm = () => {
           />
         </div>
         <div className="form__container">
-          <label for="password" className="form__label">
+          <label htmlFor="password" className="form__label">
             Password:
           </label>
           <input

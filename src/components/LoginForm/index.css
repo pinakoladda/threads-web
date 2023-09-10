@@ -9,10 +9,34 @@
     gap: 20px;
 }
 
+.form__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+    color: #157F1F;
+}
+
 .form__name {
     font-size: 24px;
-    margin: 0 0 10px;
-    color: #157F1F;
+    margin: 0;
+}
+
+.form__header-text {
+    margin: 0;
+}
+
+.form__link {
+    margin-left: 5px;
+}
+
+.form__link:hover {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.form__link:visited {
+    color: #a7b3a6;
 }
 
 .form__container {

@@ -5,6 +5,7 @@ import "./index.css";
 import { Posts } from "./pages/posts";
 import { LoginPage } from "./pages/login";
 import { AuthProvider } from "./hooks/useAuth/useAuth";
+import { RegisterPage } from "./pages/register";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <LoginPage />,
+  },
+  {
+    path: "/signup",
+    element: <RegisterPage />,
   },
 ]);
 
