@@ -3,26 +3,27 @@ import { IconHome } from "../Icons/IconHome";
 import { IconSearch } from "../Icons/IconSearch";
 import { IconFavorite } from "../Icons/IconFavorite";
 import { IconProfile } from "../Icons/IconProfile";
+import { Button } from "../Button";
 import "./index.css";
 
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <button className="navbar__home-button button">
+      <Button className="navbar__home-button">
         <IconHome />
-      </button>
-      <button className="navbar__search-button button">
+      </Button>
+      <Button className="navbar__search-button">
         <IconSearch />
-      </button>
-      <button className="navbar__add-button button">
+      </Button>
+      <Button className="navbar__add-button">
         <IconAdd />
-      </button>
-      <button className="navbar__favorite-button button">
+      </Button>
+      <Button className="navbar__favorite-button">
         <IconFavorite />
-      </button>
-      <button className="navbar__profile-button button">
+      </Button>
+      <Button className="navbar__profile-button">
         <IconProfile />
-      </button>
+      </Button>
     </div>
   );
 };
