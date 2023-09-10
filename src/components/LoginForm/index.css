@@ -1,3 +1,9 @@
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-form__header-container {
     display: flex;
     justify-content: space-between;
@@ -13,6 +19,7 @@
 
 .login-form__header-text {
     margin: 0;
+    font-size: 16px;
 }
 
 .login-form__link {
@@ -25,6 +32,7 @@
 }
 
 .login-form__label {
+    font-size: 16px;
     margin: 0 0 10px;
     color: #157F1F;
     cursor: pointer;
@@ -46,3 +54,25 @@
     background-color: #EFF6EE;
     color: #157F1F;
 }
+
+
+@media screen and (max-width: 450px) {
+    .login-form__name  {
+        font-size: 18px;
+    }
+    .login-form__header-text {
+        font-size: 14px;
+    }
+    .login-form__label {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+    .login-form__button {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+    .login-form__header-container {
+        margin: 0;
+    }
+  }

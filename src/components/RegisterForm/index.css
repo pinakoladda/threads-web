@@ -58,3 +58,30 @@
     background-color: #fff;
     color: #627163;
 }
+
+@media screen and (max-width: 450px) {
+    .register-form__header-container {
+        margin: 0 0 10px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .register-form__name  {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .register-form__header-text {
+        font-size: 14px;
+    }
+    .register-form__label {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+    .register-form__button {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+    .register-form__button-container {
+        margin-top: 10px;
+    }
+  }

@@ -34,7 +34,7 @@ export const RegisterForm = () => {
       });
   };
   return (
-    <div>
+    <div className="form__container">
       <Form className="register-form" onSubmit={onSubmit}>
         <div className="register-form__header-container">
           <p className="register-form__name">Sign Up</p>

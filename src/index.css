@@ -1,6 +1,6 @@
 body {
     background-color: #EFF6EE;
-    padding: 24px 12px 60px 12px;
+    /* padding: 24px 12px 60px 12px; */
     margin: 0;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -10,22 +10,4 @@ body {
 
 #root {
     width: 100%;
-}
-
-@media screen and (min-width: 350px) {
-    body {
-        padding: 40px 16px 72px 16px;
-    }
-  }
-
-@media screen and (min-width: 500px) {
-    body {
-        padding: 64px 16px 16px 16px;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    body {
-        padding: 68px 16px 16px 16px;
-    }
 }

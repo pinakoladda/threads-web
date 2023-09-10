@@ -19,3 +19,9 @@
     -webkit-text-size-adjust: 16px;
 
 }
+
+@media screen and (max-width: 450px) {
+    .input {
+        font-size: 14px;
+    }
+  }
