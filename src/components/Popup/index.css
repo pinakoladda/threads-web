@@ -11,7 +11,6 @@
 
 .popup[data-visible="false"] {
     pointer-events: none;
-
 }
 
 .popup__overlay {
@@ -38,4 +37,13 @@
     opacity: 0;
     transform: scale(0.5);
 }
+
+@media screen and (max-width: 470px) {
+    .popup {
+        align-items: end;
+    }
+    .popup__container {
+        border-radius: 8px 8px 0 0;
+    }
+  }
 
