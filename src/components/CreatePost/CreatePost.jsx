@@ -32,6 +32,8 @@ export const CreatePost = ({ onCancel }) => {
             role="textbox"
             className="create-post__input"
             placeholder="new thread here..."
+            rows={4}
+            required
           />
           <Button className="button create-post__attach-button">
             <IconAttach className="attach-button__icon" />

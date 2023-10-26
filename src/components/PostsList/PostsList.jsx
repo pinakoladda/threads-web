@@ -5,11 +5,14 @@ import "./index.css";
 
 export const PostsList = () => {
   const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
+  const getPosts = () => {
     request.get("/posts").then((res) => {
       setPosts(res.data);
     });
+  };
+
+  useEffect(() => {
+    getPosts();
   }, []);
 
   return (
@@ -21,6 +24,8 @@ export const PostsList = () => {
             userName={post.author.name}
             login={post.author.login}
             key={post._id}
+            id={post._id}
+            onDelete={getPosts}
           />
         ))}
       </div>

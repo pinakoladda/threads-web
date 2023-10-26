@@ -63,6 +63,8 @@
     font-weight: 400;
     line-height: normal;
     margin: 8px 0;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .post__like-button {
@@ -72,4 +74,28 @@
     margin: 0;
     width: 20px;
     height: 20px;
+}
+
+.post__popup-continer {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    margin: 26px;
+}
+.post__popup-button {
+    font-size: 19px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.post__popup-button:hover {
+    transition: ease-in-out 0.3s;
+    opacity: unset;
+    background-color: #efececb2;
+}
+
+.post__popup-delete-button {
+    color: red;
 }
