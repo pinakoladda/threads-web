@@ -76,14 +76,25 @@
     height: 20px;
 }
 
+.post__popup-close-button {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
 .post__popup-continer {
     width: 150px;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 12px;
-    margin: 26px;
+    padding: 36px 30px;
 }
+
 .post__popup-button {
     font-size: 19px;
     padding: 12px;

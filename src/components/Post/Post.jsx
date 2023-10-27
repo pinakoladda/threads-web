@@ -1,10 +1,11 @@
 import { IconHeartOutline } from "../Icons/IconHeartOutline";
 import { IconMore } from "../Icons/IconMore";
+import { IconClose } from "../Icons/IconClose";
 import { Button } from "../Button";
 import { Popup } from "../Popup";
 import { useState } from "react";
-import "./index.css";
 import { request } from "../../api";
+import "./index.css";
 
 export const Post = ({ text, userName, login, id, onDelete }) => {
   const [visible, setVisible] = useState();
@@ -36,7 +37,14 @@ export const Post = ({ text, userName, login, id, onDelete }) => {
       <Button className="post__like-button">
         <IconHeartOutline />
       </Button>
+
       <Popup visible={visible} onClose={() => setVisible(false)}>
+        <Button
+          className="post__popup-close-button"
+          onClick={() => setVisible(false)}
+        >
+          <IconClose />
+        </Button>
         <div className="post__popup-continer">
           <Button className="post__popup-button post__popup-edit-button">
             Edit
