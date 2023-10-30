@@ -87,7 +87,6 @@
 }
 
 .post__popup-continer {
-    width: 150px;
     display: flex;
     flex-direction: column;
     text-align: center;

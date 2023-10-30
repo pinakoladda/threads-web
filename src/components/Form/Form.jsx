@@ -1,9 +1,7 @@
+import cn from "classnames";
+
 import "./index.css";
 
 export const Form = (props) => {
-  return (
-    <div className="form__container">
-      <form {...props} className={`form ${props.className}`} />
-    </div>
-  );
+  return <form {...props} className={cn("form", props.className)} />;
 };

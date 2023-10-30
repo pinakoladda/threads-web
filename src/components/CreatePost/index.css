@@ -1,20 +1,18 @@
 .create-post__form {
-    padding: 12px;
+    padding: 18px;
     gap: unset;
-    max-width: 400px;
 }
 
 .create-post__container {
     display: flex;
     margin-bottom: 30px;
-    gap: 25%;
-    align-items: end;
 }
 
 .create-post__close-button {
     color: #627163;
     padding: 0;
     font-size: 14px;
+    z-index: 1;
 }
 
 
@@ -23,6 +21,10 @@
     font-size: 18px;
     color: #157F1F;
     text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
 }
 
 .create-post__content-container {

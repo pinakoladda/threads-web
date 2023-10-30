@@ -27,6 +27,11 @@
     justify-content: center;
 }
 
+.navbar__popup {
+    width: 100%;
+    max-width: 470px;
+}
+
 @media screen and (min-width: 350px) {
     .navbar {
         padding: 14px 24px;

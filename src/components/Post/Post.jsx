@@ -38,24 +38,26 @@ export const Post = ({ text, userName, login, id, onDelete }) => {
         <IconHeartOutline />
       </Button>
 
-      <Popup visible={visible} onClose={() => setVisible(false)}>
+      <Popup
+        className="post__popup-continer"
+        visible={visible}
+        onClose={() => setVisible(false)}
+      >
         <Button
           className="post__popup-close-button"
           onClick={() => setVisible(false)}
         >
           <IconClose />
         </Button>
-        <div className="post__popup-continer">
-          <Button className="post__popup-button post__popup-edit-button">
-            Edit
-          </Button>
-          <Button
-            className="post__popup-button post__popup-delete-button"
-            onClick={deletePost}
-          >
-            Delete
-          </Button>
-        </div>
+        <Button className="post__popup-button post__popup-edit-button">
+          Edit
+        </Button>
+        <Button
+          className="post__popup-button post__popup-delete-button"
+          onClick={deletePost}
+        >
+          Delete
+        </Button>
       </Popup>
     </div>
   );

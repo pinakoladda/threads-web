@@ -28,7 +28,11 @@ export const Navbar = () => {
       <Button className="navbar__profile-button">
         <IconProfile />
       </Button>
-      <Popup visible={visible} onClose={() => setVisible(false)}>
+      <Popup
+        className="navbar__popup"
+        visible={visible}
+        onClose={() => setVisible(false)}
+      >
         <CreatePost onCancel={() => setVisible(false)} />
       </Popup>
     </nav>
