@@ -1,5 +1,7 @@
 .register-form {
     gap: 10px;
+    margin: 16px auto;
+    max-width: 470px;
 }
 
 .register-form__header-container {
