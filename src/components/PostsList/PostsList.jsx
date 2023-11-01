@@ -26,6 +26,7 @@ export const PostsList = () => {
             key={post._id}
             id={post._id}
             onDelete={getPosts}
+            avatar={post.author.avatar}
           />
         ))}
       </div>

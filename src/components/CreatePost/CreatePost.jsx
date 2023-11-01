@@ -24,7 +24,7 @@ export const CreatePost = ({ onCancel }) => {
         <p className="create-post__header">New post</p>
       </div>
       <div className="create-post__content-container">
-        <div className="create-post__avatar"></div>
+        <img className="create-post__avatar" src={user?.avatar} />
         <div className="container">
           <p className="create-post__user-name">{user?.login}</p>
           <textarea

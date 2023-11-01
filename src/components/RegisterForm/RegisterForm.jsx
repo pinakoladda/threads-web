@@ -11,24 +11,14 @@ export const RegisterForm = () => {
   const [errorText, setErrorText] = useState();
   const onSubmit = (event) => {
     event.preventDefault();
-    const login = event.target.login.value;
-    const password = event.target.password.value;
-    const email = event.target.email.value;
-    const name = event.target.name.value;
-    const surname = event.target.surname.value;
-    const birthDate = event.target.birthDate.value;
-    const gender = event.target.gender.value;
-    console.log(login, password);
+
+    const formData = new FormData(event.target);
 
     request
-      .post("/signup", {
-        login,
-        password,
-        email,
-        name,
-        surname,
-        birthDate,
-        gender,
+      .post("/signup", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then((res) => {
         localStorage.setItem("token", res.data.token);
@@ -83,12 +73,20 @@ export const RegisterForm = () => {
           <Input name="login" placeholder="login" type="text" required />
         </div>
         <div className="register-form__container">
-          <label className="register-form__label">Password:</label>{" "}
+          <label className="register-form__label">Password:</label>
           <Input
             name="password"
             placeholder="password"
             type="password"
             required
+          />
+        </div>
+        <div className="register-form__container">
+          <label className="register-form__label">Avatar</label>
+          <input
+            name="avatar"
+            type="file"
+            accept="image/png, image/gif, image/jpeg"
           />
         </div>
         <div className="register-form__container reqister-form__error">

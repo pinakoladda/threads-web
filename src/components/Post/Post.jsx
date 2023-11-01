@@ -7,7 +7,7 @@ import { useState } from "react";
 import { request } from "../../api";
 import "./index.css";
 
-export const Post = ({ text, userName, login, id, onDelete }) => {
+export const Post = ({ text, userName, login, id, onDelete, avatar }) => {
   const [visible, setVisible] = useState();
   const deletePost = async () => {
     const result = confirm("are you sure?");
@@ -23,7 +23,7 @@ export const Post = ({ text, userName, login, id, onDelete }) => {
   return (
     <div className="post">
       <div className="post__header">
-        <div className="post__avatar"></div>
+        <img className="post__avatar" src={avatar} />
         <div className="post__info">
           <div className="post__user-name">{userName}</div>
           <div className="post__login">{login}</div>
