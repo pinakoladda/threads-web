@@ -7,10 +7,14 @@ import { Button } from "../Button";
 import { Popup } from "../Popup";
 import { CreatePost } from "../CreatePost";
 import { useState } from "react";
+import { useAuth } from "../../hooks/useAuth/useAuth";
+
 import "./index.css";
 
 export const Navbar = () => {
+  const { user } = useAuth();
   const [visible, setVisible] = useState();
+  console.log(user);
   return (
     <nav className="navbar">
       <Button className="navbar__home-button">
@@ -26,7 +30,11 @@ export const Navbar = () => {
         <IconFavorite />
       </Button>
       <Button className="navbar__profile-button">
-        <IconProfile />
+        {user?.avatar ? (
+          <img className="navbar__avatar" src={user.avatar} />
+        ) : (
+          <IconProfile />
+        )}
       </Button>
       <Popup
         className="navbar__popup"

@@ -16,6 +16,13 @@
     color: #A4A4A4;
 }
 
+.navbar__avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .navbar__add-button {
     background-color: #157F1F;
     color: #fff;

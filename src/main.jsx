@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 import { Posts } from "./pages/posts";
 import { LoginPage } from "./pages/login";
 import { AuthProvider } from "./hooks/useAuth/useAuth";
 import { RegisterPage } from "./pages/register";
 import { CreatePost } from "./components/CreatePost";
+import { Profile } from "./pages/profile";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/create-post",
     element: <CreatePost />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 

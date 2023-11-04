@@ -82,8 +82,9 @@ export const RegisterForm = () => {
           />
         </div>
         <div className="register-form__container">
-          <label className="register-form__label">Avatar</label>
+          <label className="register-form__label">Avatar:</label>
           <input
+            className="register-form__input-avatar"
             name="avatar"
             type="file"
             accept="image/png, image/gif, image/jpeg"

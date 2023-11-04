@@ -3,6 +3,7 @@ import { Button } from "../Button";
 import { IconAttach } from "../Icons/IconAttach";
 import { request } from "../../api";
 import { useAuth } from "../../hooks/useAuth/useAuth";
+import { IconProfile } from "../Icons/IconProfile";
 import "./index.css";
 
 export const CreatePost = ({ onCancel }) => {
@@ -24,7 +25,11 @@ export const CreatePost = ({ onCancel }) => {
         <p className="create-post__header">New post</p>
       </div>
       <div className="create-post__content-container">
-        <img className="create-post__avatar" src={user?.avatar} />
+        {user?.avatar ? (
+          <img className="create-post__avatar" src={user?.avatar} />
+        ) : (
+          <IconProfile className="create-post__avatar" />
+        )}
         <div className="container">
           <p className="create-post__user-name">{user?.login}</p>
           <textarea

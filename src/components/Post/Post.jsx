@@ -5,6 +5,7 @@ import { Button } from "../Button";
 import { Popup } from "../Popup";
 import { useState } from "react";
 import { request } from "../../api";
+import { IconProfile } from "../Icons/IconProfile";
 import "./index.css";
 
 export const Post = ({ text, userName, login, id, onDelete, avatar }) => {
@@ -23,7 +24,11 @@ export const Post = ({ text, userName, login, id, onDelete, avatar }) => {
   return (
     <div className="post">
       <div className="post__header">
-        <img className="post__avatar" src={avatar} />
+        {avatar ? (
+          <img className="post__avatar" src={avatar} />
+        ) : (
+          <IconProfile className="post__avatar" />
+        )}
         <div className="post__info">
           <div className="post__user-name">{userName}</div>
           <div className="post__login">{login}</div>

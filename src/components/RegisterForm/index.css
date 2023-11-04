@@ -33,6 +33,7 @@
 .register-form__label {
     margin: 0 0 10px;
     color: #157F1F;
+    font-size: 16px;
 }
 
 .register-form__button-container {
@@ -48,6 +49,30 @@
     border-radius: 5px;
     flex: 1 1 auto;
 }
+
+.register-form__input-avatar{
+    font-size: 16px;
+    color: #627163;
+}
+/* .register-form__input-avatar{
+    color: #157F1F;
+} */
+
+.register-form__input-avatar::file-selector-button {
+    margin: 0 15px 0 0;
+    padding: 10px 20px;
+    color: #627163;
+    background-color: #fff;
+    border: 1px solid #627163;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .register-form__input-avatar::file-selector-button:hover {
+    color: #157F1F;
+    background-color: #EFF6EE;
+  }
 
 .register-form__button_done {
     border-color: #157F1F;
