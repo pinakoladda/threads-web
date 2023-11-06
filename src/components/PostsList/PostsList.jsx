@@ -25,8 +25,10 @@ export const PostsList = () => {
             login={post.author.login}
             key={post._id}
             id={post._id}
-            onDelete={getPosts}
+            onUpdate={getPosts}
             avatar={post.author.avatar}
+            isLiked={post.isLiked}
+            likes={post.likes}
           />
         ))}
       </div>

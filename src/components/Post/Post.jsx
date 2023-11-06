@@ -6,9 +6,19 @@ import { Popup } from "../Popup";
 import { useState } from "react";
 import { request } from "../../api";
 import { IconProfile } from "../Icons/IconProfile";
+import { IconHeartFilled } from "../Icons/IconHeartFilled";
 import "./index.css";
 
-export const Post = ({ text, userName, login, id, onDelete, avatar }) => {
+export const Post = ({
+  text,
+  userName,
+  login,
+  id,
+  onUpdate,
+  avatar,
+  isLiked,
+  likes,
+}) => {
   const [visible, setVisible] = useState();
   const deletePost = async () => {
     const result = confirm("are you sure?");
@@ -19,8 +29,16 @@ export const Post = ({ text, userName, login, id, onDelete, avatar }) => {
       method: "delete",
     });
     setVisible(false);
-    onDelete();
+    onUpdate();
   };
+
+  const LikePost = async () => {
+    await request(`/posts/${id}/like`, {
+      method: isLiked ? "delete" : "put",
+    });
+    onUpdate();
+  };
+
   return (
     <div className="post">
       <div className="post__header">
@@ -39,10 +57,10 @@ export const Post = ({ text, userName, login, id, onDelete, avatar }) => {
         </Button>
       </div>
       <p className="post__text">{text}</p>
-      <Button className="post__like-button">
-        <IconHeartOutline />
+      <Button className="post__like-button" onClick={LikePost}>
+        {isLiked ? <IconHeartFilled /> : <IconHeartOutline />}
       </Button>
-
+      {likes > 0 && <p className="post__likes">{likes}</p>}
       <Popup
         className="post__popup-continer"
         visible={visible}

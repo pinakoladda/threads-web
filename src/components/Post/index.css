@@ -82,6 +82,12 @@
     height: 20px;
 }
 
+.post__likes {
+    margin: 0;
+    padding: 0;
+    
+}
+
 .post__popup-close-button {
     margin: 0;
     padding: 0;
