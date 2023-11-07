@@ -14,7 +14,6 @@ import "./index.css";
 export const Navbar = () => {
   const { user } = useAuth();
   const [visible, setVisible] = useState();
-  console.log(user);
   return (
     <nav className="navbar">
       <Button className="navbar__home-button">
