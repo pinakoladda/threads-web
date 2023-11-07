@@ -82,10 +82,22 @@
     height: 20px;
 }
 
-.post__likes {
+.post__like {
+    width: 20px;
+    height: 20px;
+}
+
+.post__like-filled {
+    color: #157F1F;
+}
+
+.post__likes-count {
     margin: 0;
     padding: 0;
-    
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
 }
 
 .post__popup-close-button {
