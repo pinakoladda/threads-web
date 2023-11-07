@@ -60,10 +60,16 @@ export const Post = ({
         </Button>
       </div>
       <p className="post__text">{text}</p>
+      {/* <div className="post__like-container"> */}
       <Button className="post__like-button" onClick={LikePost}>
-        {isLiked ? <IconHeartFilled /> : <IconHeartOutline />}
+        {isLiked ? (
+          <IconHeartFilled className="post__like post__like-filled" />
+        ) : (
+          <IconHeartOutline className="post__like post__like-outline" />
+        )}
       </Button>
-      {likes > 0 && <p className="post__likes">{likes}</p>}
+      {likes > 0 && <p className="post__likes-count">{likes}</p>}
+      {/* </div> */}
       <Popup
         className="post__popup-continer"
         visible={visible}
