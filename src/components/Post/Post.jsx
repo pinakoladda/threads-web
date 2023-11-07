@@ -8,6 +8,7 @@ import { request } from "../../api";
 import { IconProfile } from "../Icons/IconProfile";
 import { IconHeartFilled } from "../Icons/IconHeartFilled";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
 import "./index.css";
 
 export const Post = ({
@@ -19,6 +20,7 @@ export const Post = ({
   avatar,
   isLiked,
   likes,
+  date,
 }) => {
   const [visible, setVisible] = useState();
   const deletePost = async () => {
@@ -54,7 +56,7 @@ export const Post = ({
           <div className="post__user-name">{userName}</div>
           <div className="post__login">{login}</div>
         </div>
-        <div className="post__date">11 oct</div>
+        <div className="post__date">{format(new Date(date), "	Pp")}</div>
         <Button className="post__more-button" onClick={() => setVisible(true)}>
           <IconMore />
         </Button>
