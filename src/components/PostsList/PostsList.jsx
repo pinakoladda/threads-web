@@ -29,6 +29,7 @@ export const PostsList = () => {
             avatar={post.author.avatar}
             isLiked={post.isLiked}
             likes={post.likes}
+            date={post.date}
           />
         ))}
       </div>
