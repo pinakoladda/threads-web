@@ -3,12 +3,12 @@ import { IconMore } from "../Icons/IconMore";
 import { IconClose } from "../Icons/IconClose";
 import { Button } from "../Button";
 import { Popup } from "../Popup";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { request } from "../../api";
 import { IconProfile } from "../Icons/IconProfile";
 import { IconHeartFilled } from "../Icons/IconHeartFilled";
 import { Link } from "react-router-dom";
-import { format } from "date-fns";
+import { format, differenceInHours, formatDistance } from "date-fns";
 import "./index.css";
 
 export const Post = ({
@@ -42,6 +42,17 @@ export const Post = ({
     onUpdate();
   };
 
+  const formattedDate = useMemo(() => {
+    const postDate = new Date(date);
+    const now = new Date();
+    const diffInHours = differenceInHours(now, postDate);
+
+    if (diffInHours < 48) {
+      return formatDistance(postDate, now, { addSuffix: true });
+    }
+    return format(postDate, "MMM d");
+  }, [date]);
+
   return (
     <div className="post">
       <div className="post__header">
@@ -56,7 +67,7 @@ export const Post = ({
           <div className="post__user-name">{userName}</div>
           <div className="post__login">{login}</div>
         </div>
-        <div className="post__date">{format(new Date(date), "	Pp")}</div>
+        <div className="post__date">{formattedDate}</div>
         <Button className="post__more-button" onClick={() => setVisible(true)}>
           <IconMore />
         </Button>
