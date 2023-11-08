@@ -8,6 +8,7 @@ import { Popup } from "../Popup";
 import { CreatePost } from "../CreatePost";
 import { useState } from "react";
 import { useAuth } from "../../hooks/useAuth/useAuth";
+import { Link } from "react-router-dom";
 
 import "./index.css";
 
@@ -16,9 +17,11 @@ export const Navbar = () => {
   const [visible, setVisible] = useState();
   return (
     <nav className="navbar">
-      <Button className="navbar__home-button">
-        <IconHome />
-      </Button>
+      <Link to="/">
+        <Button className="navbar__home-button">
+          <IconHome />
+        </Button>
+      </Link>
       <Button className="navbar__search-button">
         <IconSearch />
       </Button>
@@ -28,13 +31,15 @@ export const Navbar = () => {
       <Button className="navbar__favorite-button">
         <IconFavorite />
       </Button>
-      <Button className="navbar__profile-button">
-        {user?.avatar ? (
-          <img className="navbar__avatar" src={user.avatar} />
-        ) : (
-          <IconProfile />
-        )}
-      </Button>
+      <Link to="/profile">
+        <Button className="navbar__profile-button">
+          {user?.avatar ? (
+            <img className="navbar__avatar" src={user.avatar} />
+          ) : (
+            <IconProfile />
+          )}
+        </Button>
+      </Link>
       <Popup
         className="navbar__popup"
         visible={visible}

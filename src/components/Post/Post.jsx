@@ -7,6 +7,7 @@ import { useState } from "react";
 import { request } from "../../api";
 import { IconProfile } from "../Icons/IconProfile";
 import { IconHeartFilled } from "../Icons/IconHeartFilled";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export const Post = ({
@@ -42,11 +43,13 @@ export const Post = ({
   return (
     <div className="post">
       <div className="post__header">
-        {avatar ? (
-          <img className="post__avatar" src={avatar} />
-        ) : (
-          <IconProfile className="post__avatar" />
-        )}
+        <Link to="/profile">
+          {avatar ? (
+            <img className="post__avatar" src={avatar} />
+          ) : (
+            <IconProfile className="post__avatar" />
+          )}
+        </Link>
         <div className="post__info">
           <div className="post__user-name">{userName}</div>
           <div className="post__login">{login}</div>
