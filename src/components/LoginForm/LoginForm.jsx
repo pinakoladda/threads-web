@@ -10,7 +10,6 @@ export const LoginForm = () => {
     event.preventDefault();
     const login = event.target.login.value;
     const password = event.target.password.value;
-    console.log(login, password);
 
     request.post("/signin", { login, password }).then((res) => {
       localStorage.setItem("token", res.data.token);

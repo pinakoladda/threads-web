@@ -11,7 +11,6 @@ export const CreatePost = ({ onCancel }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     const text = event.target.text.value;
-    console.log(text);
     request.post("/posts", { text }).then((res) => {
       window.location.href = "/";
     });
