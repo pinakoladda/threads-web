@@ -1,20 +1,7 @@
-import { useState, useEffect } from "react";
 import { Post } from "../Post/Post";
-import { request } from "../../api";
 import "./index.css";
 
-export const PostsList = () => {
-  const [posts, setPosts] = useState([]);
-  const getPosts = () => {
-    request.get("/posts").then((res) => {
-      setPosts(res.data);
-    });
-  };
-
-  useEffect(() => {
-    getPosts();
-  }, []);
-
+export const PostsList = ({ posts, getPosts }) => {
   return (
     <>
       <div className="posts-list">
