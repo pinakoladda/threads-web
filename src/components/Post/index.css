@@ -73,6 +73,12 @@
     white-space: pre-wrap;
 }
 
+.post__like-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 .post__like-button {
     background-color: unset;
     border: none;
@@ -94,10 +100,9 @@
 .post__likes-count {
     margin: 0;
     padding: 0;
-    width: 20px;
-    height: 20px;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    color: #A4A4A4;
 }
 
 .post__popup-close-button {
