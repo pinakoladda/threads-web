@@ -1,11 +1,28 @@
+import { request } from "../../api";
 import { useAuth } from "../../hooks/useAuth/useAuth";
 import { Button } from "../Button";
 import { IconProfile } from "../Icons/IconProfile";
 import { Navbar } from "../Navbar/Navbar";
+import { PostsList } from "../PostsList";
+import { useState, useEffect } from "react";
 import "./index.css";
 
 export const UserProfile = () => {
   const { user } = useAuth();
+  const [posts, setPosts] = useState([]);
+
+  const getPosts = (userId) => {
+    if (!userId) return;
+
+    request.get(`/posts/user/${userId}`).then((res) => {
+      setPosts(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getPosts(user?._id);
+  }, [user]);
+
   return (
     <>
       <Navbar />
@@ -30,6 +47,7 @@ export const UserProfile = () => {
           <Button className="profile__edit-button">Edit Profile</Button>
         </div>
       </div>
+      <PostsList posts={posts} getPosts={getPosts} />
     </>
   );
 };
