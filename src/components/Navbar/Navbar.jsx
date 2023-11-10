@@ -31,7 +31,7 @@ export const Navbar = () => {
       <Button className="navbar__favorite-button">
         <IconFavorite />
       </Button>
-      <Link to="/profile">
+      <Link to={`/user/${user?.login}`}>
         <Button className="navbar__profile-button">
           {user?.avatar ? (
             <img className="navbar__avatar" src={user.avatar} />

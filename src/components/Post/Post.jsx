@@ -56,7 +56,7 @@ export const Post = ({
   return (
     <div className="post">
       <div className="post__header">
-        <Link to="/profile">
+        <Link to={`/user/${login}`}>
           {avatar ? (
             <img className="post__avatar" src={avatar} />
           ) : (

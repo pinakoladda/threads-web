@@ -7,9 +7,11 @@ import { PostsList } from "../PostsList";
 import { useState, useEffect } from "react";
 import "./index.css";
 
-export const UserProfile = () => {
-  const { user } = useAuth();
+export const UserProfile = ({ user }) => {
+  const { user: currentUser } = useAuth();
   const [posts, setPosts] = useState([]);
+
+  const isCurrentUser = user?._id === currentUser?._id;
 
   const getPosts = (userId) => {
     if (!userId) return;
@@ -29,7 +31,7 @@ export const UserProfile = () => {
       <div className="profile">
         <div className="profile__info">
           <div className="profile__info_container">
-            <h2 className="profile__user-name">Buddy</h2>
+            <h2 className="profile__user-name">{user?.name}</h2>
             <h3 className="profile__user-login">@{user?.login}</h3>
             <p className="profile__user-followers">2 followers</p>
           </div>
@@ -44,7 +46,10 @@ export const UserProfile = () => {
             I love my mom and dad, love eating, sleeping and walking outside
             whith my family
           </p>
-          <Button className="profile__edit-button">Edit Profile</Button>
+
+          <Button className="profile__edit-button">
+            {isCurrentUser ? "Edit Profile" : "Subscribe"}
+          </Button>
         </div>
       </div>
       <PostsList posts={posts} getPosts={getPosts} />
