@@ -1,6 +1,6 @@
 body {
-    background-color: #EFF6EE;
-    /* padding: 24px 12px 60px 12px; */
+    background-color: hsl(113, 31%, 95%);
+    padding: 70px 0 40px 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -12,6 +12,25 @@ body {
     width: 100%;
 }
 
+@media screen and (max-width: 650px) {
+    body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+    body {
+        padding-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    body {
+        padding: 12px 0 64px 0;
+    }
+  }
+  
 
 /* 
 #157F1F - main dark green;
