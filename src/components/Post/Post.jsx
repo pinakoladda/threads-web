@@ -10,6 +10,7 @@ import { IconHeartFilled } from "../Icons/IconHeartFilled";
 import { Link } from "react-router-dom";
 import { format, differenceInHours, formatDistance } from "date-fns";
 import "./index.css";
+import { useAuth } from "../../hooks/useAuth/useAuth";
 
 export const Post = ({
   text,
@@ -21,7 +22,11 @@ export const Post = ({
   isLiked,
   likes,
   date,
+  author,
 }) => {
+  const { user } = useAuth();
+  const postAuthor = user?._id === author;
+
   const [visible, setVisible] = useState();
   const deletePost = async () => {
     const result = confirm("are you sure?");
@@ -68,9 +73,16 @@ export const Post = ({
           <div className="post__login">{login}</div>
         </div>
         <div className="post__date">{formattedDate}</div>
-        <Button className="post__more-button" onClick={() => setVisible(true)}>
-          <IconMore />
-        </Button>
+        {postAuthor ? (
+          <Button
+            className="post__more-button"
+            onClick={() => setVisible(true)}
+          >
+            <IconMore />
+          </Button>
+        ) : (
+          ""
+        )}
       </div>
       <p className="post__text">{text}</p>
       <div className="post__like-container">

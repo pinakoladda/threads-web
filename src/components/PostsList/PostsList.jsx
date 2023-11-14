@@ -17,6 +17,7 @@ export const PostsList = ({ posts, getPosts }) => {
             isLiked={post.isLiked}
             likes={post.likes}
             date={post.date}
+            author={post.author._id}
           />
         ))}
       </div>
