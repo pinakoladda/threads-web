@@ -22,15 +22,19 @@ export const Navbar = () => {
           <IconHome />
         </Button>
       </Link>
-      <Button className="navbar__search-button">
-        <IconSearch />
-      </Button>
+      <Link to="/search">
+        <Button className="navbar__search-button">
+          <IconSearch />
+        </Button>
+      </Link>
       <Button className="navbar__add-button" onClick={() => setVisible(true)}>
         <IconAdd />
       </Button>
-      <Button className="navbar__favorite-button">
-        <IconFavorite />
-      </Button>
+      <Link to="/notifications">
+        <Button className="navbar__favorite-button">
+          <IconFavorite />
+        </Button>
+      </Link>
       <Link to={`/user/${user?.login}`}>
         <Button className="navbar__profile-button">
           {user?.avatar ? (

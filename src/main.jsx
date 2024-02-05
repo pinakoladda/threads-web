@@ -7,6 +7,8 @@ import { AuthProvider } from "./hooks/useAuth/useAuth";
 import { RegisterPage } from "./pages/register";
 import { CreatePost } from "./components/CreatePost";
 import { Profile } from "./pages/profile";
+import { SearchPage } from "./pages/search";
+import { NotificationsPage } from "./pages/notifications";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
   {
     path: "/user/:userLogin",
     element: <Profile />,
+  },
+  {
+    path: "/search",
+    element: <SearchPage />,
+  },
+  {
+    path: "/notifications",
+    element: <NotificationsPage />,
   },
 ]);
 

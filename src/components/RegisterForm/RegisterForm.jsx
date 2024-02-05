@@ -35,7 +35,7 @@ export const RegisterForm = () => {
           <p className="register-form__name">Sign Up</p>
           <p className="register-form__header-text">
             Already have an accont?
-            <Link className="register-form__link" href="/signin">
+            <Link className="register-form__link" to="/signin">
               Sign in
             </Link>
           </p>

@@ -23,7 +23,7 @@ export const LoginForm = () => {
           <p className="login-form__name">Sign in</p>
           <p className="login-form__header-text">
             First time here?
-            <Link className="login-form__link" href="/signup" title="Sign up">
+            <Link className="login-form__link" to="/signup" title="Sign up">
               Sign up
             </Link>
           </p>

@@ -7,7 +7,7 @@ import { useState, useMemo } from "react";
 import { request } from "../../api";
 import { IconProfile } from "../Icons/IconProfile";
 import { IconHeartFilled } from "../Icons/IconHeartFilled";
-import { Link } from "react-router-dom";
+import { Link } from "../Link";
 import { format, differenceInHours, formatDistance } from "date-fns";
 import "./index.css";
 import { useAuth } from "../../hooks/useAuth/useAuth";
@@ -69,7 +69,9 @@ export const Post = ({
           )}
         </Link>
         <div className="post__info">
-          <div className="post__user-name">{userName}</div>
+          <Link to={`/user/${login}`}>
+            <div className="post__user-name">{userName}</div>
+          </Link>
           <div className="post__login">{login}</div>
         </div>
         <div className="post__date">{formattedDate}</div>

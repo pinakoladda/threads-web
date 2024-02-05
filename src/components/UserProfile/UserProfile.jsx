@@ -52,7 +52,7 @@ export const UserProfile = ({ user }) => {
           </Button>
         </div>
       </div>
-      <PostsList posts={posts} getPosts={getPosts} />
+      <PostsList posts={posts} getPosts={() => getPosts(user?._id)} />
     </>
   );
 };
