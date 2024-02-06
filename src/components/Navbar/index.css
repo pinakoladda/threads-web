@@ -12,8 +12,14 @@
     max-width: 720px;
 }
 
-.navbar__search-button, .navbar__favorite-button, .navbar__profile-button {
-    color: #A4A4A4;
+
+
+.navbar__button {
+    color: #000;
+}
+
+.navbar__button_active {
+    color: #157F1F;
 }
 
 .navbar__avatar {
