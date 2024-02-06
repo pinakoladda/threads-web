@@ -23,6 +23,7 @@
 
 .register-form__link {
     margin-left: 5px;
+    text-decoration: underline;
 }
 
 .register-form__container {
