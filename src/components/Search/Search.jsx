@@ -7,7 +7,7 @@ export const Search = () => {
     <>
       <Navbar />
       <div className="search__main">
-        <label className="search__label" for="mainInput">
+        <label className="search__label" htmlFor="mainInput">
           Type your request:
         </label>
         <div className="container">
@@ -16,7 +16,7 @@ export const Search = () => {
             placeholder="I'm searching for..."
             id="mainInput"
             name="mainInput"
-          ></input>
+          />
           <Button className="search__button">Go!</Button>
         </div>
       </div>

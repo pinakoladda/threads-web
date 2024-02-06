@@ -1,3 +1,5 @@
+import cn from "classnames";
+
 import { IconAdd } from "../Icons/IconAdd";
 import { IconHome } from "../Icons/IconHome";
 import { IconSearch } from "../Icons/IconSearch";
@@ -15,15 +17,28 @@ import "./index.css";
 export const Navbar = () => {
   const { user } = useAuth();
   const [visible, setVisible] = useState();
+
   return (
     <nav className="navbar">
       <Link to="/">
-        <Button className="navbar__home-button">
+        <Button
+          className={cn(
+            "navbar__button",
+            window.location.pathname === "/" ? "navbar__button_active" : "",
+          )}
+        >
           <IconHome />
         </Button>
       </Link>
       <Link to="/search">
-        <Button className="navbar__search-button">
+        <Button
+          className={cn(
+            "navbar__button",
+            window.location.pathname === "/search"
+              ? "navbar__button_active"
+              : "",
+          )}
+        >
           <IconSearch />
         </Button>
       </Link>
@@ -31,12 +46,26 @@ export const Navbar = () => {
         <IconAdd />
       </Button>
       <Link to="/notifications">
-        <Button className="navbar__favorite-button">
+        <Button
+          className={cn(
+            "navbar__button",
+            window.location.pathname === "/notifications"
+              ? "navbar__button_active"
+              : "",
+          )}
+        >
           <IconFavorite />
         </Button>
       </Link>
       <Link to={`/user/${user?.login}`}>
-        <Button className="navbar__profile-button">
+        <Button
+          className={cn(
+            "navbar__button",
+            window.location.pathname === `/user/${user?.login}`
+              ? "navbar__button_active"
+              : "",
+          )}
+        >
           {user?.avatar ? (
             <img className="navbar__avatar" src={user.avatar} />
           ) : (
