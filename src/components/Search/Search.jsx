@@ -10,7 +10,7 @@ export const Search = () => {
         <label className="search__label" htmlFor="mainInput">
           Type your request:
         </label>
-        <div className="container">
+        <div className="search__container">
           <input
             className="search__input"
             placeholder="I'm searching for..."
