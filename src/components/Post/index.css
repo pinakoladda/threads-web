@@ -139,3 +139,10 @@
 .post__popup-delete-button {
     color: red;
 }
+
+@media screen and (max-width: 450px) {
+    .post {
+        border-radius: unset;
+        padding: 10px;
+    }
+  }

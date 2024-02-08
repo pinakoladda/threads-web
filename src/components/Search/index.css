@@ -1,19 +1,18 @@
 .search__main {
-    display: flex; 
-    flex-direction: column;
-    margin: 0 10px;
+    margin: 0 auto;
+    max-width: 720px;
 }
 
 .search__label {
-    margin: 20px 0;
+    display: block;
     font-size: 18px;
     color: #157F1F;
     font-weight: bolder;
+    margin-bottom: 12px;
 }
 
 .search__container {
     display: flex;
-    justify-content: space-between;
 }
 
 .search__input {
@@ -34,29 +33,23 @@
 .search__button {
     border-radius: 0 6px 6px 0;
     min-width: 60px;
-    padding: 0 12px;
     flex: 0 0 auto;
     font-size: 18px;
     color: #fff;
     background-color: #157F1F;
 }
 
-
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 470px) {
+    .search__main {
+        padding: 12px;
+    }
     .search__label {
         font-size: 14px;
-        margin: 0 0 10px;
     }
     .search__input {
         font-size: 14px;
     }
-    .search__button{
+    .search__button {
         font-size: 14px;
     }
-  }
-
-  @media screen and (min-width: 500px) {
-    .search__main {
-        margin: 0 70px 0;
-    }
-  }
+}
