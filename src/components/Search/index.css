@@ -13,6 +13,7 @@
 
 .search__container {
     display: flex;
+    margin-bottom: 26px;
 }
 
 .search__input {
