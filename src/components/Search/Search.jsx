@@ -29,9 +29,6 @@ export const Search = () => {
     <>
       <Navbar />
       <div className="search__main">
-        <label className="search__label" htmlFor="mainInput">
-          Type your request:
-        </label>
         <div className="search__container">
           <input
             onChange={handleInputChange}

@@ -1,19 +1,11 @@
 .search__main {
     margin: 0 auto;
-    max-width: 720px;
-}
-
-.search__label {
-    display: block;
-    font-size: 18px;
-    color: #157F1F;
-    font-weight: bolder;
-    margin-bottom: 12px;
+    max-width: 516px;
 }
 
 .search__container {
     display: flex;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
 }
 
 .search__input {
@@ -40,17 +32,16 @@
     background-color: #157F1F;
 }
 
-@media screen and (max-width: 470px) {
-    .search__main {
-        padding: 12px;
-    }
-    .search__label {
-        font-size: 14px;
+@media screen and (max-width: 450px) {
+    .search__container {
+        margin-bottom: 12px;
     }
     .search__input {
         font-size: 14px;
+        border-radius: unset;
     }
     .search__button {
         font-size: 14px;
+        border-radius: unset;
     }
 }
